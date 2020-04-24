@@ -40,7 +40,7 @@ class Contenedor extends Component {
 
     let ingredientsSeleccionados = this.state.ingredientsSeleccionados;
     ingredientsSeleccionados.push(newIngrediente);
-    
+
     this.setState(prevState => ({
       ingredientsSeleccionados: [...new Set(ingredientsSeleccionados.flat())]
     }));
@@ -50,7 +50,7 @@ class Contenedor extends Component {
 
   quitarIngredientes = (ingredienteNombre) => {
     let ingredientesSeleccionados = this.state.ingredientsSeleccionados;
-  
+
     ingredientesSeleccionados.forEach((ingrediente, index) => {
       if (ingrediente.product === ingredienteNombre) {
         ingredientesSeleccionados.splice(index, 1);
@@ -69,7 +69,14 @@ class Contenedor extends Component {
       return ingredient.price
     });
 
-    const subtotal = precios.reduce((sum, x) => sum + x);
+    let subtotal = null;
+
+    if (precios.length > 0) {
+      subtotal = precios.reduce((sum, x) => sum + x);
+    } else {
+      subtotal = 0;
+    }
+
     const total = subtotal + this.state.gastosDeEnvio;
 
     this.setState({
@@ -82,6 +89,8 @@ class Contenedor extends Component {
     return (
       <div>
         <Encabezado name={this.state.name} />
+
+
         {this.state.ingredients && this.state.ingredients.map((ingredient, i) =>
           <Ingrediente
             key={i}
@@ -99,10 +108,13 @@ class Contenedor extends Component {
           items={this.state.ingredientsSeleccionados.length}
           subtotal={this.state.subtotal}
           gastosDeEnvio={this.state.gastosDeEnvio}
-          total={this.state.total} />
-        <Boton total={this.state.total} />   
-        
-      </div>  
+          total={this.state.total}
+          currency={this.state.currency} />
+          
+        <Boton total={this.state.total}
+          currency={this.state.currency} />
+
+      </div>
 
     );
   }
