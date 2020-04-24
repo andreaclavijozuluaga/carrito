@@ -1,0 +1,58 @@
+.input{
+ margin: 30px 10px 0px 10px;
+ width:20px;
+ height:20px;
+
+}
+
+.nombre-producto{
+  font-family: 'Roboto Slab', serif;
+  margin: 0px 0px 0px 0px;
+  font-size: 20px;
+  
+}
+
+.item{
+ font-size: 40px;
+ font-family: 'Roboto';
+ align-content: center;
+ align-items: center;
+/* NO CENTRA :C */
+ margin-top: 8px;
+ color: rgb(37, 145, 233);
+ font-weight: bold;
+}
+
+.cantidad{
+  border-radius: 5px;
+}
+
+.precio{
+  font-family: 'Roboto';
+  font-size: 40px;
+  color: rgb(62, 131, 62);  
+  
+
+}
+
+.nombre-marca{
+  font-family: 'Roboto';
+  font-size: 20; 
+  margin: 0px;
+  color: #838383;
+}
+
+.peso-kg{
+  font-family: 'Roboto';
+  font-size: 20; 
+  margin: 0px;
+}
+
+.row{
+  padding: 10px;
+}
+
+.ingrediente{
+  text-align: left;
+  margin-left: 1rem;
+}

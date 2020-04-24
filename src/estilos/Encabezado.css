@@ -1,0 +1,19 @@
+
+.texto-ingredientes{
+  font-size: 13px;
+  margin: 5em 0em 0em .3em;
+}
+
+.text-nombre-plato{
+  font-family: 'Roboto Slab', serif;
+}
+
+.texto-seleccionar-todo {
+  margin: 0px;
+  padding-top: 2px;
+}
+
+.texto-deseleccionar {
+  margin: 0px;
+  padding-top: 2px;
+}

@@ -1,0 +1,34 @@
+.texto-item{
+  color: #838383;
+  font-size: 18px ;
+  margin-top: 80px;
+}
+
+.contador-items{
+  color: black;
+}
+
+.texto-subtotal{
+  color: #838383;
+  font-size: 20px ;
+  margin-top: 20px;
+  
+}
+
+.gastos-de-envio{
+  color: #838383;
+  font-size: 20px ;
+  margin-top: 20px;
+}
+
+.texto-total{
+  font-size: 20px ;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.valor-item{
+  font-family: 'Roboto';
+  font-size: 20px;
+  margin-top: 20px;
+}
